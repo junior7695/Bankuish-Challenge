@@ -33,18 +33,24 @@ class PostRepositoryImplTest {
 
     @ExperimentalCoroutinesApi
     @Test
-    fun getSearchResponse() = runBlockingTest {
+    fun `getPosts, should call getPosts by remoteDataSource`() = runBlockingTest {
+        // Given
         val postList = mutableListOf<Post>()
-        val post = Post(1, "test_repo", Author(1, "junior7695"), "test_desc", false, 1, 1)
+
+        val post = Post(1234, "test", Author(1234, "junior7695"), "test description", false, 1, 1)
+
         postList.add(post)
+
         val responseDTO = RepositoriesGitHubDTO(1, postList)
 
         val responseRetrofit = Response.success(responseDTO)
 
         coEvery { remoteDataSource.getPosts("kotlin", 1, 1) } returns responseRetrofit
 
-        coVerify { repository.getPosts("kotlin", 1, 1) }
+        // When
+        repository.getPosts("kotlin", 1, 1)
 
+        // Then
         coVerify { remoteDataSource.getPosts("kotlin", 1, 1) }
     }
 }

@@ -11,5 +11,5 @@ internal interface AppModuleBinds {
 
     @Singleton
     @Binds
-    fun bindRepository(defaultDataRepository: PostRepositoryImpl): PostRepository
+    fun bindRepository(postRepository: PostRepositoryImpl): PostRepository
 }
