@@ -1,6 +1,7 @@
-package co.com.bankuish.mobile.jaime.challenge.infrastructure.model
+package co.com.bankuish.mobile.jaime.challenge.infrastructure.dtos
 
 import android.os.Parcelable
+import co.com.bankuish.mobile.jaime.challenge.infrastructure.models.Post
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 

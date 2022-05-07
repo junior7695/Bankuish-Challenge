@@ -4,9 +4,9 @@ import co.com.bankuish.mobile.jaime.challenge.application.TestMainApplication
 import co.com.bankuish.mobile.jaime.challenge.di.component.DaggerTestAppComponent
 import co.com.bankuish.mobile.jaime.challenge.di.component.TestAppComponent
 import co.com.bankuish.mobile.jaime.challenge.infrastructure.data_source.DataSource
-import co.com.bankuish.mobile.jaime.challenge.infrastructure.model.Author
-import co.com.bankuish.mobile.jaime.challenge.infrastructure.model.Post
-import co.com.bankuish.mobile.jaime.challenge.infrastructure.model.RepositoriesGitHubDTO
+import co.com.bankuish.mobile.jaime.challenge.infrastructure.models.Author
+import co.com.bankuish.mobile.jaime.challenge.infrastructure.models.Post
+import co.com.bankuish.mobile.jaime.challenge.infrastructure.dtos.RepositoriesGitHubDTO
 import io.mockk.coEvery
 import io.mockk.coVerify
 import kotlinx.coroutines.ExperimentalCoroutinesApi

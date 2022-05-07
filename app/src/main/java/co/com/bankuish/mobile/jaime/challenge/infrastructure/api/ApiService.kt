@@ -1,6 +1,6 @@
 package co.com.bankuish.mobile.jaime.challenge.infrastructure.api
 
-import co.com.bankuish.mobile.jaime.challenge.infrastructure.model.RepositoriesGitHubDTO
+import co.com.bankuish.mobile.jaime.challenge.infrastructure.dtos.RepositoriesGitHubDTO
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

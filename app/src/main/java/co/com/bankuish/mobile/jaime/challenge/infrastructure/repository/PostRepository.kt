@@ -1,7 +1,7 @@
 package co.com.bankuish.mobile.jaime.challenge.infrastructure.repository
 
 import co.com.bankuish.mobile.jaime.challenge.infrastructure.converters.Result
-import co.com.bankuish.mobile.jaime.challenge.infrastructure.model.RepositoriesGitHubDTO
+import co.com.bankuish.mobile.jaime.challenge.infrastructure.dtos.RepositoriesGitHubDTO
 
 internal interface PostRepository {
 

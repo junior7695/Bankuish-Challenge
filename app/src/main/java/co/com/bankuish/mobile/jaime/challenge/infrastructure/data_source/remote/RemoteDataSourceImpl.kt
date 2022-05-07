@@ -2,7 +2,7 @@ package co.com.bankuish.mobile.jaime.challenge.infrastructure.data_source.remote
 
 import co.com.bankuish.mobile.jaime.challenge.infrastructure.api.ApiService
 import co.com.bankuish.mobile.jaime.challenge.infrastructure.data_source.DataSource
-import co.com.bankuish.mobile.jaime.challenge.infrastructure.model.RepositoriesGitHubDTO
+import co.com.bankuish.mobile.jaime.challenge.infrastructure.dtos.RepositoriesGitHubDTO
 import retrofit2.Response
 import javax.inject.Inject
 
