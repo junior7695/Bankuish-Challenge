@@ -6,14 +6,11 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 internal data class Post(
-    internal val id: Int,
-    internal val name: String,
-    @SerializedName("owner")
-    internal val author: Author,
-    internal val description: String,
-    @SerializedName("private")
-    internal val isPrivate: Boolean,
-    internal val visibility: String,
-    internal val watchers: Int,
-    internal val forks: Int
+    @SerializedName("id") internal val id: Int,
+    @SerializedName("name") internal val name: String,
+    @SerializedName("author") internal val author: Author,
+    @SerializedName("description") internal val description: String,
+    @SerializedName("private") internal val isPrivate: Boolean,
+    @SerializedName("watchers") internal val watchers: Int,
+    @SerializedName("forks") internal val forks: Int
 ) : Parcelable

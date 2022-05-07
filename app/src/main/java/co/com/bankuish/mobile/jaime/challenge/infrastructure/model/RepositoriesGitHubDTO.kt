@@ -5,8 +5,7 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-internal data class ResponseDTO(
-    @SerializedName("total_count")
-    val totalCount: Int,
-    val items: List<Post>
+internal data class RepositoriesGitHubDTO(
+    @SerializedName("total_count") val totalCount: Int = 0,
+    @SerializedName("total_count") val items: List<Post> = emptyList()
 ) : Parcelable

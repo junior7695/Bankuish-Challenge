@@ -14,7 +14,7 @@ android {
         targetSdk 31
         version=appVersion
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.example.dagger.CustomTestRunner"
     }
 
     buildTypes {
@@ -32,11 +32,17 @@ android {
     }
 }
 
+kapt {
+    generateStubs = true
+}
+
 dependencies {
 
     implementation "androidx.core:core-ktx:$androidxVersion"
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
     implementation "com.google.android.material:material:$materialDesignVersion"
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
 
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
@@ -50,9 +56,14 @@ dependencies {
 
     // For Tests
     testImplementation "junit:junit:$junitVersion"
+    testImplementation "androidx.test:rules:$androidxTestRulesVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxTestsVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$expresoVersion"
-    def room_version = '2.3.0'
-    implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
+    testImplementation "io.mockk:mockk:$mockkVersion"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+
+    // Using Dagger in androidTest and Robolectric too
+    kaptTest "com.google.dagger:dagger-compiler:$daggerVersion"
+    kaptAndroidTest "com.google.dagger:dagger-compiler:$daggerVersion"
 }
