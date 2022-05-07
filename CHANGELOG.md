@@ -2,3 +2,11 @@
 #Added
 - Added CHANGELOG for more information at changes.
 - Migrated dependencies versions to gradle.properties.
+- Added Dagger Config.
+- Added Api Service with Retrofit2.
+- Added Remote Data Source.
+- Added Data Source.
+- Added Repository.
+- Added Models Post and Author.
+- Added RepositoriesGitHubDTO for response by API.
+- Added Converter Result.
