@@ -8,5 +8,5 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 internal data class RepositoriesGitHubDTO(
     @SerializedName("total_count") val totalCount: Int = 0,
-    @SerializedName("total_count") val items: List<Post> = emptyList()
+    @SerializedName("items") val items: List<Post> = emptyList()
 ) : Parcelable

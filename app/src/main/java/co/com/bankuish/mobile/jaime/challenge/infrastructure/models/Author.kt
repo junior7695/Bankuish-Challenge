@@ -6,7 +6,6 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 internal data class Author(
-    internal val id: Int,
-    @SerializedName("login")
-    internal val name: String
+    @SerializedName("id") internal val id: Int,
+    @SerializedName("login") internal val name: String
 ) : Parcelable

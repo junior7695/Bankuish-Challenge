@@ -9,9 +9,9 @@ internal interface ApiService {
 
     @GET("repositories")
     suspend fun getPosts(
-        @Query("q") text: String = "kotlin",
-        @Query("per_page") perPage: Int = 30,
-        @Query("page") page: Int = 1
+        @Query("q") query: String,
+        @Query("per_page") perPage: Int,
+        @Query("page") page: Int
     ): Response<RepositoriesGitHubDTO>
 
 }

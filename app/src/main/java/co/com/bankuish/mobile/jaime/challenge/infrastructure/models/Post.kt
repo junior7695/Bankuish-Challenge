@@ -8,7 +8,7 @@ import kotlinx.parcelize.Parcelize
 internal data class Post(
     @SerializedName("id") internal val id: Int,
     @SerializedName("name") internal val name: String,
-    @SerializedName("author") internal val author: Author,
+    @SerializedName("owner") internal val author: Author,
     @SerializedName("description") internal val description: String,
     @SerializedName("private") internal val isPrivate: Boolean,
     @SerializedName("watchers") internal val watchers: Int,
