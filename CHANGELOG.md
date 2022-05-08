@@ -10,3 +10,8 @@
 - Added Models Post and Author.
 - Added RepositoriesGitHubDTO for response by API.
 - Added Converter Result.
+- Added Post View Model.
+- Added Post Activity.
+- Added Adapter for Recycler View from Post Activity.
+- Added Detail View Model.
+- Added Detail Activity.
