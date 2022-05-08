@@ -1,5 +1,6 @@
 package co.com.bankuish.mobile.jaime.challenge.ui.post
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import co.com.bankuish.mobile.jaime.challenge.R
 import co.com.bankuish.mobile.jaime.challenge.databinding.ActivityPostBinding
 import co.com.bankuish.mobile.jaime.challenge.infrastructure.models.Post
+import co.com.bankuish.mobile.jaime.challenge.ui.detail.DetailActivity
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
@@ -73,9 +75,9 @@ internal class PostActivity : DaggerAppCompatActivity(), PostAdapter.BtnViewPost
     }
 
     override fun onViewPost(post: Post) {
-        /*val i = Intent(this, PostActivity::class.java)
+        val i = Intent(this, DetailActivity::class.java)
         i.putExtra("post", post)
-        startActivity(i)*/
+        startActivity(i)
     }
 
     override fun showError(showErrorScreen: Boolean, errorMessage: String?) {
