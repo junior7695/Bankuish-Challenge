@@ -2,7 +2,9 @@ package co.com.bankuish.mobile.jaime.challenge.ui.detail
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import co.com.bankuish.mobile.jaime.challenge.R
 import co.com.bankuish.mobile.jaime.challenge.databinding.ActivityDetailBinding
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
@@ -20,9 +22,14 @@ class DetailActivity : DaggerAppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
-        binding = ActivityDetailBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_detail)
 
-        setContentView(binding.root)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_detail)
+
+        binding.apply {
+            viewmodel = viewModel
+            lifecycleOwner = this@DetailActivity
+        }
 
         viewModel.post = intent.getParcelableExtra("post")!!
 
