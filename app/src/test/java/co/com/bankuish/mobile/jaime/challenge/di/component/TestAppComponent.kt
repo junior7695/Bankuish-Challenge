@@ -2,7 +2,9 @@ package co.com.bankuish.mobile.jaime.challenge.di.component
 
 import android.content.Context
 import co.com.bankuish.mobile.jaime.challenge.application.TestMainApplication
+import co.com.bankuish.mobile.jaime.challenge.di.ViewModelBuilderModule
 import co.com.bankuish.mobile.jaime.challenge.di.module.TestAppModule
+import co.com.bankuish.mobile.jaime.challenge.di.modules.ActivityBuildersModule
 import co.com.bankuish.mobile.jaime.challenge.di.modules.AppModule
 import co.com.bankuish.mobile.jaime.challenge.di.modules.AppModuleBinds
 import co.com.bankuish.mobile.jaime.challenge.di.modules.NetworkModule
@@ -18,7 +20,9 @@ import javax.inject.Singleton
         AndroidInjectionModule::class,
         NetworkModule::class,
         TestAppModule::class,
-        AppModuleBinds::class]
+        AppModuleBinds::class,
+        ViewModelBuilderModule::class,
+        ActivityBuildersModule::class]
 )
 interface TestAppComponent : AppComponent {
 

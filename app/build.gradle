@@ -17,6 +17,15 @@ android {
         testInstrumentationRunner "com.example.dagger.CustomTestRunner"
     }
 
+    viewBinding {
+        enabled = true
+    }
+
+    dataBinding {
+        enabled = true
+        enabledForTests = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -39,8 +48,10 @@ kapt {
 dependencies {
 
     implementation "androidx.core:core-ktx:$androidxVersion"
+    implementation "androidx.activity:activity-ktx:$activityVersion"
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
     implementation "com.google.android.material:material:$materialDesignVersion"
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation "androidx.room:room-runtime:$roomVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
 
@@ -53,6 +64,12 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
     implementation "com.google.dagger:dagger-android-support:$daggerVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
 
     // For Tests
     testImplementation "junit:junit:$junitVersion"
