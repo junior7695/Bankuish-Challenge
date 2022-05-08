@@ -79,6 +79,7 @@ dependencies {
     testImplementation "io.mockk:mockk:$mockkVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+    testImplementation "com.squareup.okhttp3:mockwebserver:3.11.0"
 
     // Using Dagger in androidTest and Robolectric too
     kaptTest "com.google.dagger:dagger-compiler:$daggerVersion"

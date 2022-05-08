@@ -8,6 +8,7 @@ import co.com.bankuish.mobile.jaime.challenge.di.modules.ActivityBuildersModule
 import co.com.bankuish.mobile.jaime.challenge.di.modules.AppModule
 import co.com.bankuish.mobile.jaime.challenge.di.modules.AppModuleBinds
 import co.com.bankuish.mobile.jaime.challenge.di.modules.NetworkModule
+import co.com.bankuish.mobile.jaime.challenge.infrastructure.api.ApiServiceTest
 import co.com.bankuish.mobile.jaime.challenge.infrastructure.repository.PostRepositoryImplTest
 import dagger.BindsInstance
 import dagger.Component
@@ -34,4 +35,6 @@ interface TestAppComponent : AppComponent {
     fun inject(app: TestMainApplication)
 
     fun inject(test: PostRepositoryImplTest)
+
+    fun inject(api: ApiServiceTest)
 }
